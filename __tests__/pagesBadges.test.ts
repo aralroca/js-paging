@@ -15,6 +15,13 @@ Deno.test("Should work with just 5 pages", async () => {
   assertEquals(output, expected);
 });
 
+Deno.test("Should work with 9 pages", async () => {
+  const input = { currentPage: 1, pages: 9 };
+  const output = pagesBadges(input);
+  const expected = [1, 2, 3, 4, null, 9];
+  assertEquals(output, expected);
+});
+
 Deno.test("Should work with pages bigger than 5", async () => {
   const input = { currentPage: 14, pages: 20 };
   const output = pagesBadges(input);

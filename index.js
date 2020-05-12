@@ -3,9 +3,9 @@ export default function pagesBadges({ currentPage, pages, numBadges = 5 }) {
 
   // Without separators case
   // ex: [1, 2, 3, 4, 5]
-  if (pages <= numBadges) return [...Array(pages)].map((v, i) => i + 1);
+  if (pages <= numBadges) return Array.from({ length: pages }).map((v, i) => i + 1);
 
-  const sideBadges = [...Array(numBadges - 1)];
+  const sideBadges = Array.from({ length: numBadges - 1 });
 
   // With a separator at the end case
   // ex: [1, 2, 3, 4, null, 49]

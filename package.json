@@ -1,6 +1,6 @@
 {
   "name": "js-paging",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Paging badges generator",
   "source": "index.js",
   "main": "dist/index.js",
