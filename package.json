@@ -1,0 +1,35 @@
+{
+  "name": "js-paging",
+  "version": "0.1.0",
+  "description": "Paging badges generator",
+  "source": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "prepublish": "yarn build",
+    "example": "yarn build && cd example && yarn && yarn dev"
+  },
+  "keywords": [
+    "paging",
+    "javascript",
+    "typescript",
+    "react",
+    "angular",
+    "preact",
+    "vue",
+    "svelte",
+    "node",
+    "deno"
+  ],
+  "author": {
+    "name": "Aral Roca Gòmez",
+    "email": "contact@aralroca.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "0.12.0"
+  }
+}
