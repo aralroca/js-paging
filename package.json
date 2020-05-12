@@ -9,8 +9,7 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch",
-    "prepublish": "yarn build",
-    "example": "yarn build && cd example && yarn && yarn dev"
+    "prepublish": "yarn build"
   },
   "keywords": [
     "paging",
