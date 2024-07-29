@@ -1,17 +1,19 @@
 {
   "name": "js-paging",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Paging badges generator",
   "source": "index.js",
-  "main": "dist/index.js",
-  "module": "dist/index.module.js",
-  "unpkg": "dist/index.umd.js",
+  "main": "out/index.js",
+  "types": "index.d.ts",
   "scripts": {
-    "build": "microbundle",
-    "dev": "microbundle watch",
+    "build": "bun build --minify --outdir=out index.ts",
     "prepublish": "yarn build",
-    "test": "deno test ./__tests__/pagesBadges.test.ts"
+    "test": "bun test ./__tests__/pagesBadges.test.ts",
+    "format": "bun run biome format --write .",
+    "check": "bun run biome check --write .",
+    "lint": "bun run biome lint --write ."
   },
+  "files": ["out", "index.d.ts"],
   "keywords": [
     "paging",
     "javascript",
@@ -22,6 +24,7 @@
     "vue",
     "svelte",
     "node",
+    "bun",
     "deno"
   ],
   "author": {
@@ -30,7 +33,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "microbundle": "0.12.3",
-    "jest": "26.4.0"
+    "@biomejs/biome": "1.8.3",
+    "typescript": "latest"
   }
 }
